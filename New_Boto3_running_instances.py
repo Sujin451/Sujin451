@@ -1,6 +1,9 @@
 import boto3
+import sys
 import csv
 def SG(writer):
+  accesskey = sys.argv[1]
+  secretkey = sys.argv[2]
   client = boto3.client('ec2', region_name="eu-west-1", aws_access_key_id=accesskey, aws_secret_access_key=secretkey)
   
   dict01={}
